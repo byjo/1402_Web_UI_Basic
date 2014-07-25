@@ -3,225 +3,257 @@
 
 <head>
 	<meta charset = "utf-8">
+	<link rel="stylesheet" type="text/css" href="./css/googleplay.css" />
 </head>
 
 <body>
-	<header>
-		<a href="http://play.google.com"><img src="" alt="google play"></a>
-		<form id="search">
-			<input>
-			<button></button>
-		</form>
-		<a id="app" href=""><img src="" alt="앱"></a>
-		<a id="account "href="">account</a>
-	</header>
+	<div id="container">
+		<header>
+			<a href="http://play.google.com">
+				<div class ="logo"><img src="./img/play_logo_x2.png" alt="google play"></div></a>
+			<form id="search">
+				<input>
+				<button></button>
+			</form>
+			<span id="action_right">
+				<a id="app" href=""><img src="" alt="앱"></a>
+				<a id="account "href=""><img src="" alt="계정"></a>
+			</span>
+		</header>
 
-	<aside>
-		<ul>
-			<li>도서</li>
-				<ul>
-					<li>내 책</li>
-					<li>쇼핑하기</li>
-				</ul>
-			<li>앱</li>
-			<li>영화</li>
-			<li>기기</li>
-			<li>스토어</li>
-		</ul>
-	</aside>
-
-	<nav>
-		<div id="menu">
-			<ul id="genre">
-				<li>가족/관계</li>
-				<li>건강/웰빙</li>
-				<li>경영/경제</li>
-				<li>만화</li>
-				<li>소설/문학</li>
-				<li>어린이</li>
-				<li>여행</li>
-				<li>역사</li>
-				<li>예술과 디자인</li>
-				<li>외국어/교재</li>
-				<li>요리/음료</li>
-				<li>인물/자서전</li>
-			</ul>
+		<aside>
 			<ul>
-				<li>홈</li>
-				<li>인기 차트</li>
-				<li>신간</li>
+				<li>도서</li>
+					<ul>
+						<li>내 책</li>
+						<li>쇼핑하기</li>
+					</ul>
+				<li>앱</li>
+				<li>영화</li>
+				<li>기기</li>
+				<li>스토어</li>
 			</ul>
-		</div>
-		<button id="help">
-		</button>
-		<button id="setting">
-		</button>
-	</nav>
+		</aside>
 
-	<section>
-		<div class="shelf">
-			<h1>주간 베스트셀러</h1>
-			<span>한 주 동안 가장 많은 사랑을 받은 도서</span>
-			<button class="more"></button>		
-			
-			<div class="book">
-				<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="어서와 연애는 처음이지?">
+		<nav>
+			<div id="menu">
+				<ul id="genre">
+					<li>가족/관계</li>
+					<li>건강/웰빙</li>
+					<li>경영/경제</li>
+					<li>만화</li>
+					<li>소설/문학</li>
+					<li>어린이</li>
+					<li>여행</li>
+					<li>역사</li>
+					<li>예술과 디자인</li>
+					<li>외국어/교재</li>
+					<li>요리/음료</li>
+					<li>인물/자서전</li>
+				</ul>
 				<ul>
-					<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">어서와 연애는 처음이지?</a></li>
-					<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">장해정</a></li>
-					<li class="price">₩980</li>
-					<li class="star"></li>
-					<li class="popular"></li>
+					<li>홈</li>
+					<li>인기 차트</li>
+					<li>신간</li>
+				</ul>
+			</div>
+			<button id="help">
+			</button>
+			<button id="setting">
+			</button>
+		</nav>
+
+		<section>
+			<div class="shelf">
+				<h1>주간 베스트셀러</h1>
+				<span>한 주 동안 가장 많은 사랑을 받은 도서</span>
+				<button class="more"></button>		
+				
+				<ul class="book">
+					<li>
+						<div class="cover">
+							<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="어서와 연애는 처음이지?">
+						</div>
+						<ul class="content">
+							<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">어서와 연애는 처음이지?</a></li>
+							<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">장해정</a></li>
+							<li class="price">₩980</li>
+							<li class="star"></li>
+							<li class="popular"></li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="cover">
+							<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="잡담이 능력이다">
+						</div>
+						<ul>
+							<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">잡담이 능력이다</a></li>
+							<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">사이토 다카시</a></li>
+							<li class="price">₩9,100</li>
+							<li class="star"></li>
+							<li class="popular"></li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="cover">
+							<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="생각 버리기 연습">
+						</div>
+						<ul>
+							<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">생각 버리기 연습</a></li>
+							<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">코이케 류노스케</a></li>
+							<li class="price">₩4,800</li>
+							<li class="star"></li>
+							<li class="popular"></li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="cover">
+							<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="인생을 단순하게 사는 100가지 방법">
+						</div>
+						<ul>
+							<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">인생을 단순하게 사는 100가지 방법</a></li>
+							<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">일레인 제임스</a></li>
+							<li class="price">₩9,600</li>
+							<li class="star">★★★☆☆</li>
+							<li class="popular"></li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="cover">
+							<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="젊은 베르테르의 슬픔">
+						</div>
+						<ul>
+							<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">젊은 베르테르의 슬픔</a></li>
+							<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">요한 볼프강 폰 괴테</a></li>
+							<li class="price">₩1,500</li>
+							<li class="star"></li>
+							<li class="popular"></li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="cover">
+							<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="데일 카네기의 자기관리론">
+						</div>
+						<ul>
+							<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">데일 카네기의 자기관리론</a></li>
+							<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">데일 카네기</a></li>
+							<li class="price">₩3,000</li>
+							<li class="star">★★★★☆</li>
+							<li class="popular"></li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 
-			<div class="book">
-				<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="잡담이 능력이다">
-				<ul>
-					<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">잡담이 능력이다</a></li>
-					<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">사이토 다카시</a></li>
-					<li class="price">₩9,100</li>
-					<li class="star"></li>
-					<li class="popular"></li>
+			<div class="shelf">
+				<h1>맞춤 추천</h1>
+				<button class="more"></button>		
+				
+				<ul class="book">
+					<li>
+						<div class="cover">
+							<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="비즈니스 영어회화 이메일 핵심패턴">
+						</div>
+						<ul>
+							<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">비즈니스 영어회화 이메일 핵심패턴</a></li>
+							<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">차형석</a></li>
+							<li class="price">₩11,200</li>
+							<li class="star"></li>
+							<li class="popular"></li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="cover">
+							<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="영어회화, 365단어로 끝장내기">
+						</div>
+						<ul>
+							<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">영어회화, 365단어로 끝장내기</a></li>
+							<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">백선엽</a></li>
+							<li class="price">₩9,000</li>
+							<li class="star"></li>
+							<li class="popular"></li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="cover">
+							<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="청소년을 위한 삼국지 1">
+						</div>
+						<ul>
+							<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">청소년을 위한 삼국지 1</a></li>
+							<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">나관중</a></li>
+							<li class="price">무료</li>
+							<li class="star"></li>
+							<li class="popular"></li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="cover">
+							<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="절망이여, 기다려라 곧 너와 이별하리니.">
+						</div>
+						<ul>
+							<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">절망이여, 기다려라 곧 너와 이별하리니.</a></li>
+							<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">김인자</a></li>
+							<li class="price">무료</li>
+							<li class="star"></li>
+							<li class="popular"></li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="cover">
+							<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="출퇴근 한뼘지식 시리즈 by 과학동아 체험판4">
+						</div>
+						<ul>
+							<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">출퇴근 한뼘지식 시리즈 by 과학동아 체험판4</a></li>
+							<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">과학동아디지털편집</a></li>
+							<li class="price">무료</li>
+							<li class="star"></li>
+							<li class="popular"></li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="cover">
+							<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="하늘과 바람과 별과 시">
+						</div>
+						<ul>
+							<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">하늘과 바람과 별과 시</a></li>
+							<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">윤동주</a></li>
+							<li class="price">무료</li>
+							<li class="star"></li>
+							<li class="popular">인기도서</li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 
-			<div class="book">
-				<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="생각 버리기 연습">
-				<ul>
-					<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">생각 버리기 연습</a></li>
-					<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">코이케 류노스케</a></li>
-					<li class="price">₩4,800</li>
-					<li class="star"></li>
-					<li class="popular"></li>
+		</section>
+
+		<footer>
+			<div>
+				©2014 Google 
+				<ul id="bottom">
+					<li><a href="https://play.google.com/intl/ko_kr/about/play-terms.html">사이트 서비스 약관</a></li> 
+					<li><a href="https://play.google.com/intl/ko_kr/about/device-terms.html">기기 판매약관</a></li>
+					<li><a href="https://support.google.com/googleplay/bin/answer.py?answer=1196018&hl=ko&authuser=0">개인정보취급방침</a></li>
+					<li><a href="http://developer.android.com/index.html">개발자</a></li>
 				</ul>
 			</div>
-
-			<div class="book">
-				<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="인생을 단순하게 사는 100가지 방법">
-				<ul>
-					<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">인생을 단순하게 사는 100가지 방법</a></li>
-					<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">일레인 제임스</a></li>
-					<li class="price">₩9,600</li>
-					<li class="star">★★★☆☆</li>
-					<li class="popular"></li>
-				</ul>
+			<div>
+				상호명: Google Inc. | 대표자: Eric Schmidt | 주소: 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States | 대표전화: +1 650-253-0000 | 
+				<a href="https://support.google.com/googleplay/?hl=kr&hlrm=en">도움말</a> | 이메일: <a href="https://play.google.com/store/mailto:gpk-usersupport@google.com">gpk-usersupport@google.com</a>
+				<br>구글 플레이에 등록된 앱과 게임은 개발자들이 제공하고 판매하는 것이며, 구글은 개발자가 아닌 이상 등록한 상품 정보 및 거래에 대한 어떠한 책임도 지지 않습니다.
 			</div>
-
-			<div class="book">
-				<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="젊은 베르테르의 슬픔">
-				<ul>
-					<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">젊은 베르테르의 슬픔</a></li>
-					<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">요한 볼프강 폰 괴테</a></li>
-					<li class="price">₩1,500</li>
-					<li class="star"></li>
-					<li class="popular"></li>
-				</ul>
-			</div>
-
-			<div class="book">
-				<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="데일 카네기의 자기관리론">
-				<ul>
-					<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">데일 카네기의 자기관리론</a></li>
-					<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">데일 카네기</a></li>
-					<li class="price">₩3,000</li>
-					<li class="star">★★★★☆</li>
-					<li class="popular"></li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="shelf">
-			<h1>맞춤 추천</h1>
-			<button class="more"></button>		
-			
-			<div class="book">
-				<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="비즈니스 영어회화 이메일 핵심패턴">
-				<ul>
-					<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">비즈니스 영어회화 이메일 핵심패턴</a></li>
-					<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">차형석</a></li>
-					<li class="price">₩11,200</li>
-					<li class="star"></li>
-					<li class="popular"></li>
-				</ul>
-			</div>
-
-			<div class="book">
-				<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="영어회화, 365단어로 끝장내기">
-				<ul>
-					<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">영어회화, 365단어로 끝장내기</a></li>
-					<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">백선엽</a></li>
-					<li class="price">₩9,000</li>
-					<li class="star"></li>
-					<li class="popular"></li>
-				</ul>
-			</div>
-
-			<div class="book">
-				<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="청소년을 위한 삼국지 1">
-				<ul>
-					<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">청소년을 위한 삼국지 1</a></li>
-					<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">나관중</a></li>
-					<li class="price">무료</li>
-					<li class="star"></li>
-					<li class="popular"></li>
-				</ul>
-			</div>
-
-			<div class="book">
-				<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="절망이여, 기다려라 곧 너와 이별하리니.">
-				<ul>
-					<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">절망이여, 기다려라 곧 너와 이별하리니.</a></li>
-					<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">김인자</a></li>
-					<li class="price">무료</li>
-					<li class="star"></li>
-					<li class="popular"></li>
-				</ul>
-			</div>
-
-			<div class="book">
-				<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="출퇴근 한뼘지식 시리즈 by 과학동아 체험판4">
-				<ul>
-					<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">출퇴근 한뼘지식 시리즈 by 과학동아 체험판4</a></li>
-					<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">과학동아디지털편집</a></li>
-					<li class="price">무료</li>
-					<li class="star"></li>
-					<li class="popular"></li>
-				</ul>
-			</div>
-
-			<div class="book">
-				<img src="https://encrypted.google.com/books/images/frontcover/VvCTIS-i28IC?fife=w300-rw" alt="하늘과 바람과 별과 시">
-				<ul>
-					<li class="title"><a href="https://play.google.com/store/books/details/%EC%9E%A5%ED%95%B4%EC%A0%95_%EC%96%B4%EC%84%9C%EC%99%80_%EC%97%B0%EC%95%A0%EB%8A%94_%EC%B2%98%EC%9D%8C%EC%9D%B4%EC%A7%80?id=VvCTIS-i28IC">하늘과 바람과 별과 시</a></li>
-					<li class="author"><a href="https://play.google.com/store/books/author?id=%EC%9E%A5%ED%95%B4%EC%A0%95">윤동주</a></li>
-					<li class="price">무료</li>
-					<li class="star"></li>
-					<li class="popular">인기도서</li>
-				</ul>
-			</div>
-		</div>
-
-	</section>
-
-	<footer>
-		<p>
-			©2014 Google 
-			<ul id="bottom">
-				<li><a href="https://play.google.com/intl/ko_kr/about/play-terms.html">사이트 서비스 약관</a></li> 
-				<li><a href="https://play.google.com/intl/ko_kr/about/device-terms.html">기기 판매약관</a></li>
-				<li><a href="https://support.google.com/googleplay/bin/answer.py?answer=1196018&hl=ko&authuser=0">개인정보취급방침</a></li>
-				<li><a href="http://developer.android.com/index.html">개발자</a></li>
-			</ul>
-		</p>
-		<p>
-			상호명: Google Inc. | 대표자: Eric Schmidt | 주소: 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States | 대표전화: +1 650-253-0000 | 
-			<a href="https://support.google.com/googleplay/?hl=kr&hlrm=en">도움말</a> | 이메일: <a href="https://play.google.com/store/mailto:gpk-usersupport@google.com">gpk-usersupport@google.com</a>
-		</p>
-		<p>
-			구글 플레이에 등록된 앱과 게임은 개발자들이 제공하고 판매하는 것이며, 구글은 개발자가 아닌 이상 등록한 상품 정보 및 거래에 대한 어떠한 책임도 지지 않습니다.
-		</p>
-	</footer>
+		</footer>
+	</div>
 </body>
 
 </html>
