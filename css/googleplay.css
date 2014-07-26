@@ -38,6 +38,7 @@ header{
 
 #search {
 	display: inline;
+	margin-left: 5px;
 }
 
 #action_right {
