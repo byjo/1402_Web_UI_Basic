@@ -1,5 +1,5 @@
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,button{margin:0;padding:0}
-body,h1,h2,h3,h4,input,button{font-family:'돋움',Dotum,Helvetica,'Apple SD Gothic Neo',Sans-serif;color:#383d41}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,input,p,button,a{font-family:'돋움',Dotum,Helvetica,'Apple SD Gothic Neo',Sans-serif;color:#383d41}
 body{background-color:#E5E5E5;*word-break:break-all;-ms-word-break:break-all}
 li{list-style:none}
 a{text-decoration:none}
@@ -9,7 +9,7 @@ a{text-decoration:none}
 
 #wrap{
 	background-color: #E5E5E5;
-	min-width: 320px;
+	min-width: 345px;
 }
 
 header{
@@ -28,12 +28,8 @@ header{
 	text-align: center;
 }
 
-#logo{
-	
-}
-
 #logo img{
-	height: 36px;
+	height: 30px;
 	vertical-align: middle;
 
 }
@@ -67,19 +63,28 @@ header{
 	height: 24px;
 }
 
+/*nav*/
+#select_wrap {
+	text-align: center;
+}
+
 #select{
+	display: inline-block;
 	overflow: auto;
-	margin: 20px 0;
+	margin: 15px 0 0 0;
+	text-align: left;
 }
 
 .category{
-	float: left;
-	width: 150px; 
+	display: inline-block;
+	width: 155px; 
 	height: 36px;
 	line-height: 36px;
 	margin: 5px 5px;
 	text-align: center;
 	background-color: #FFFFFF;
+	border-radius: 2px;
+	border: 1px solid #D3D3D3;
 }
 
 section{
@@ -87,13 +92,12 @@ section{
 }
 
 .shelf{
-	/*min-width: 660px;*/
-	margin: 20px 5px;
-
+	margin: 20px auto;
 }
 
 .shelf .heading{
 	position: relative;
+	padding: 5px;
 }
 
 .shelf h1{
@@ -119,8 +123,7 @@ section{
 .book{
 	height: 330px;
 	max-height: 330px;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin: 10px 0;
 	overflow: hidden;
 }
 
@@ -129,10 +132,6 @@ section{
 	margin: 0 5px;
 	width: 160px;
 	height: 330px;
-}
-
-.book > li:nth-child(1){
-	margin-left: 0px;
 }
 
 .cover{
@@ -205,3 +204,16 @@ footer{
 #bottom a {
 	color: #AAAAAA;
 }
+
+@media (max-width: 680px) {
+	#select, .shelf{
+		width: 515px;
+	}
+}
+
+@media (max-width: 510px) {
+	#select, .shelf {
+		width: 345px;
+	}
+}
+
