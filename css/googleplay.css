@@ -1,3 +1,11 @@
+.icon{
+	display: inline-block;
+	background-image: url("./../img/pc_img.png");
+	background-size: 112px 1900px;
+}
+
+
+
 header{
 	background-color: #F1F1F1;
 	min-width: 780px;
@@ -8,35 +16,47 @@ header{
 #logo{
 	float: left;
 	line-height: 60px;
-	margin-left: 30px;
-	margin-right: 30px;
+	margin: 0 30px;
 }
 
 #logo img{
-	height: 40px;
+	height: 39px;
 	vertical-align: middle;
 }
 
-
 #action_right {
 	float: right;
+	position: relative;
 	margin-right: 30px;
-	width: 210px;
+	width: 250px;
 	height: 60px;
 }
 
-#action_right span, #action_right div {
-	margin: 15px 5px 0 5px;
+.action{
+	position: absolute;
+	top: 15px;
+	right: 0;
+	height: auto;
 }
 
-span.icon{
+.action li{
 	display: inline-block;
-	cursor: default;
-	background-image: url("./../img/header_img.png");
-	background-size: 112px 1900px;
+	vertical-align: middle;
+	margin: 0 5px;
 }
 
-#action_right .plus{
+.action a{
+	cursor: default;
+}
+
+.plus{
+	font-size: 13px;
+	vertical-align: top;
+}
+
+#action_right .plus:hover{
+	cursor: pointer;	
+	text-decoration: underline;
 }
 
 #action_right .app {
@@ -46,14 +66,7 @@ span.icon{
 	opacity: 0.75;
 }
 
-#action_right a{
-	cursor: default;
-}
-
-#action_right a.app:hover{
-	background-position: -51px -452px;
-	width: 30px;
-	height: 30px;
+#action_right .app:hover{
 	opacity: 1;
 }
 
@@ -64,10 +77,7 @@ span.icon{
 	opacity: 0.75;
 }
 
-#action_right a.alarm:hover{
-	background-position: 0px -69px;
-	width: 30px;
-	height: 30px;
+#action_right .alarm:hover{
 	opacity: 1;
 }
 
@@ -78,10 +88,7 @@ span.icon{
 	opacity: 0.75;
 }
 
-#action_right a.share:hover{
-	background-position: -45px -1832px;
-	width: 64px;
-	height: 30px;
+#action_right .share:hover{
 	opacity: 1;
 }
 
@@ -98,7 +105,7 @@ span.icon{
 	height: 60px;
 	min-width: 100px;
 	max-width: 650px;
-	margin-left : 248px;
+	margin-left : 245px;
 	margin-right: 330px;
 }
 
@@ -109,10 +116,13 @@ span.icon{
 
 #search input{
 	margin-top: 15px;
-	width: 100%;
+	width: 95%;
 	height: 28px;
 	border: 1px solid #cdcdcd;
 	border-right-width: 0;
+	outline-style: none;
+	padding-left: 10px;
+	font-size: 1em;
 }
 
 #search button{
@@ -126,11 +136,14 @@ span.icon{
 	background-color: #4684EF;
 }
 
-#search span{
+#search .icon{
 	background-position: -69px -349px;
 	width: 30px;
 	height: 30px;
 }
+
+
+
 
 nav{
 	height: 48px;
@@ -148,14 +161,13 @@ nav{
 	background-color: #1AA1E1;
 }
 
-#service span.icon{
+#service .icon{
 	position: absolute;
 	top: 12px;
-	background-image: url("./../img/book.png");
-	background-size: 24px 24px;
+	left: 28px;
+	background-position: -5px -1831px;
 	width: 24px;
 	height: 24px;
-	left: 24px;
 }
 
 #service .now_service{
@@ -172,7 +184,16 @@ nav{
 
 #select{
 	float: left;
-	margin-left: 30px;
+	margin-left: 34px;
+	font-size: 0.9em;
+}
+
+#select ul, #select li{
+	display: inline-block;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	color: #8D8D8D;
 }
 
 #select .genre{
@@ -188,9 +209,8 @@ nav{
 	height: 100%;
 }
 
-#select .genre span{
-	background-image: url("./../img/more.png");
-	background-size: 15px 15px;
+#select .genre .icon{
+	background-position: -26px -1849px;
 	width: 15px;
 	height: 15px;
 }
@@ -208,15 +228,10 @@ nav{
 	vertical-align: middle;
 }
 
-#select ul, #select li{
-	display: inline-block;
-	height: 48px;
-	line-height: 48px;
-	text-align: center;
-}
-
 #select .category > li:nth-child(1){
 	width: 42px;
+	height: 45px;
+	border-bottom: 3px solid #1AA1E1;
 }
 
 #select .category > li:nth-child(2){
@@ -237,44 +252,54 @@ nav{
 	background-color: #F2F2F2;
 }
 
-#option{
+#option_right{
 	float: right;
-	margin-right: 30px;
 	width: 300px;
-	height: 48px;
+	height: 48px;	
+	margin-right: 30px;
 }
 
-#option .help, #option .setting{
+#option_right .help, #option_right .setting{
 	float: right;
 	display: inline-block;
-	height: 30px;
+	height: 28px;
+	line-height: 28px;
 	border-radius: 3px;
 	border: 1px solid #D3D3D3;
 	margin: 10px 10px;
+	box-shadow: 0 1px 0 0 #F2F2F2;
 }
 
-#option .help{
+#option_right .help{
 	width: 40px;
 }
 
-#option .help .icon{
-	background-image: url("./../img/help.png");
-	background-size: 21px 21px;
+#option_right .help .icon{
+	background-position: -30px -1873px;
 	width: 21px;
 	height: 21px;
-	margin: 3px 9px;
+	margin: 4px 11px;
 }
 
-#option .setting{
+#option_right .setting{
 	width: 55px;
+	cursor: default;
 }
 
-#option .setting .icon{
-	background-image: url("./../img/setting.png");
-	background-size: 21px 21px;
+#option_right .setting .icon{
+	background-position: -4px -1873px;
 	width: 21px;
 	height: 21px;
-	margin: 4px 16px;
+	margin: 4px 17px;
+}
+
+#option_right a:hover{
+	border-color: #B1B1B1;
+	box-shadow: 0 1px 0 0 #B1B1B1;
+}
+
+#option_right a.setting:hover{
+	cursor: default;
 }
 
 aside{
@@ -286,7 +311,7 @@ aside{
 	z-index: 1;
 }
 
-aside div a{
+aside a{
 	display: inline-block;
 	width: 100%;
 	height: 100%;
@@ -302,7 +327,7 @@ aside div a{
 
 #move_service span{
 	vertical-align: middle;
-	background-position: -66px 3px;
+	background-position: -85px 2px;
 	width: 24px;
 	height: 24px;
 }
@@ -326,7 +351,7 @@ aside div a{
 }
 
 #menu li:nth-child(1){
-	margin-top: 10px;
+	margin-top: 6px;
 }
 
 #menu li a:hover{
@@ -337,7 +362,11 @@ aside div a{
 	display: inline-block;
 	width: 176px;
 	height: 100%;
-	padding-left: 20px;
+	padding-left: 23px;
+}
+
+#menu .shop{
+	color: #1380B5;
 }
 
 section{
@@ -348,7 +377,6 @@ section{
 	min-width: 660px;
 	margin: 40px 0 0 200px;
 	padding-left: 50px;
-
 }
 
 .shelf .heading{
@@ -357,7 +385,7 @@ section{
 
 .shelf h1{
 	display: inline-block;
-
+	font-size: 28px;
 }
 
 .shelf .heading div.more{
@@ -370,6 +398,7 @@ section{
 	background-color: #1AA1E1;
 	margin-right: 10px;
 	text-align: center;
+	font-size: 14px;
 	line-height: 30px;
 	color: #FFFFFF;
 }
@@ -388,6 +417,7 @@ section{
 	margin: 0 5px;
 	width: 160px;
 	height: 330px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .book > li:nth-child(1){
