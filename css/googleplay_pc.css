@@ -32,24 +32,24 @@ header{
 	height: 60px;
 }
 
-.action{
+#action_right .action{
 	position: absolute;
 	top: 15px;
 	right: 0;
 	height: auto;
 }
 
-.action li{
+#action_right .action li{
 	display: inline-block;
 	vertical-align: middle;
 	margin: 0 5px;
 }
 
-.action a{
+#action_right .action a{
 	cursor: default;
 }
 
-.plus{
+#action_right .plus{
 	font-size: 13px;
 	vertical-align: top;
 }
@@ -369,6 +369,8 @@ aside a{
 	color: #1380B5;
 }
 
+
+
 section{
 	overflow: hidden;
 }
@@ -438,7 +440,7 @@ section{
 	vertical-align: middle;
 }
 
-.overlay{
+.cover .overlay{
 	display: inline-block;
 	position: absolute;
 	top: 0;
@@ -450,7 +452,7 @@ section{
 	opacity: 0;
 }
 
-.overlay:hover{
+.cover .overlay:hover{
 	opacity: 0.3;
 }
 
@@ -505,6 +507,7 @@ footer{
 	margin-left: 200px;
 	padding-left: 20px;
 	padding-top: 40px;
+	padding-bottom: 30px;
 	font-size: 13px;
 }
 
