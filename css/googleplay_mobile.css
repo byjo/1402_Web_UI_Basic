@@ -190,8 +190,27 @@ section{
 	color: #1AA1E1;
 }
 
+#section_more{
+	text-align: center;
+	padding: 20px 0;
+}
+
+#section_more span{
+	display: inline-block;
+	width: 84px;
+	height: 36px;
+	line-height: 36px;
+	border: 1px solid;
+	background-color: #FFFFFF;
+	border-radius: 2px;
+	border: 1px solid #D3D3D3;
+	box-shadow: 0 1px 0 0 #D9D9D9;
+}
+
 footer{
-	padding-top: 40px;
+	padding-left: 10px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 	font-size: 13px;
 }
 
