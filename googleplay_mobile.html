@@ -45,7 +45,7 @@
 						<a class="more" href="#"><div class="more">더보기</div></a>
 					</div>	
 					
-					<ul class="book">
+					<ul id="book1" class="book">
 						<li>
 							<div class="cover">
 								<a href="#"><img src="./img/source/-QybAAAAQBAJ.jpeg" alt="무슨 일이 일어났는지는 아무도"></a>
@@ -203,6 +203,117 @@
 			<a href="https://support.google.com/googleplay/?hl=kr&hlrm=en">도움말</a> | 이메일: <a href="https://play.google.com/store/mailto:gpk-usersupport@google.com">gpk-usersupport@google.com</a>
 			<br>구글 플레이에 등록된 앱과 게임은 개발자들이 제공하고 판매하는 것이며, 구글은 개발자가 아닌 이상 등록한 상품 정보 및 거래에 대한 어떠한 책임도 지지 않습니다.
 		</footer>
+
+		<script>
+
+			var aBookList=[
+				{
+					title : "잡담이 능력이다",
+					imgSrc : "http://goo.gl/uIvS2M",
+					src : "#",
+					author : "사이토 다카시",
+					price : "₩9,100"
+				},
+
+				{
+					title : "생각 버리기 연습",
+					imgSrc : "http://goo.gl/JroCtc",
+					src : "#",
+					author : "코이케 류노스케",
+					price : "₩9,600"
+				}
+
+			];
+
+			var sTemplate="<li><div class='cover'><a href='<%=src%>'><img src='<%=imgSrc%>' alt='<%=title%>'></a></div><ul class='content'><li class='title'><a href='#'><%=title%></a></li><li class='author'><a href='#'><%=author%></a></li><li class='price'><a href='#'><%=price%></a></li></ul></li>";
+
+			function makeBookElement(sTemplate, aBookList){
+				var total="";
+				aBookList.forEach(
+					function(item){
+						var result = sTemplate.replace("<%=src%>",item.src);
+						result = result.replace("<%=imgSrc%>",item.imgSrc);
+						result = result.replace("<%=title%>",item.title);
+						result = result.replace("<%=title%>",item.title);
+						result = result.replace("<%=author%>",item.author);
+						result = result.replace("<%=price%>",item.price);
+						total += result+"\n"; 
+					}
+				);
+
+				return total;
+			}
+
+			
+			
+			function setNextBook(){
+				var liBooks = document.getElementsByClassName('book')[0].getElementsByTagName('li');
+
+				for(var i=0; i<2*page; i++){
+					liBooks[i].style.display="none";
+				}
+			}
+
+			function setPrevBook(){
+				var liBooks = document.getElementsByClassName('book')[0].getElementsByTagName('li');
+
+				for(var i=0; i<2*page; i++){
+					liBooks[i].style.display="block";
+				}
+			}
+			
+			
+			function handleTouchEvent(e){
+
+				switch(e.type){
+					case "touchstart" :
+						touchstartX = e.touches[0].clientX;
+						touchstartY = e.touches[0].clientY;
+						break;
+
+					case "touchend" :
+						touchendX = e.changedTouches[0].clientX;
+						touchendY = e.changedTouches[0].clientY;
+					 
+						touchoffsetX = touchendX - touchstartX;
+						touchoffsetY = touchendY - touchstartY;
+					 
+						if(Math.abs(touchoffsetX) >= 50 && Math.abs(touchoffsetY) <= 10) {
+							if(touchoffsetX < 0){
+								if(page===3)
+									break;
+								else{
+									setNextBook();
+									page++;
+									alert("move");
+								}
+							}
+								
+							else{
+
+								if(page===1)
+									break;
+								else{
+									page--;
+									setPrevBook();
+									alert("move");
+								}
+
+							}
+						}
+
+				}
+
+			}
+			var touchstartX, touchstartY;
+			var page=1;
+
+			document.addEventListener("touchstart", handleTouchEvent, false);
+			document.addEventListener("touchend", handleTouchEvent, false);
+
+			
+		</script>
+
 	</div>
 </body>
 

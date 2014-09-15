@@ -46,18 +46,47 @@
 		</div>
 
 		<div id="select">
+			<!-- <div class="genre">
+				<a class="genre" href="#">
+					<ul class="genre genretitle">장르</ul>
+					<span class="genre icon"></span>
+				</a>
+			</div> -->
 			<div class="genre">
-				<a href="#">
-					<ul>장르</ul>
-					<span class="icon"></span>
+				<a class="genre" href="#">
+					<ul class="genre">장르</ul>
+					<span class="genre"></span>
 				</a>
 			</div>
 			<div class="bar"></div>
+
 			<ul class="category">
 				<li><a href="#">홈</a></li>
 				<li><a href="#">인기 차트</a></li>
 				<li><a href="#">신간</a></li>
 			</ul>
+
+			<!-- <div class="genrelayer" style="display:none;"> -->
+			<div class="genrelayer">
+				<ul>
+					<li>가족 / 관계</li>
+					<li>건강 / 웰빙</li>
+					<li>경영 / 경제</li>
+					<li>가족/관계</li>
+					<li>가족/관계</li>
+					<li>가족/관계</li>
+					<li>가족/관계</li>
+					<li>가족/관계</li>
+					<li>가족/관계</li>
+					<li>가족/관계</li>
+					<li>가족/관계</li>
+					<li>가족/관계</li>
+					<li>가족/관계</li>
+					<li>가족/관계</li>
+					<li>가족/관계</li>
+				</ul>
+			</div>
+
 		</div>
 
 		<div id="option_right">
@@ -315,6 +344,86 @@
 				</li>
 			</ul>
 		</div>
+
+		<script>
+
+			var sTemplate="<li><div class='cover'><a href='<%=src%>'><img src='<%=imgSrc%>' alt='<%=title%>'></a></div><ul class='content'><li class='title'><a href='#'><%=title%></a></li><li class='author'><a href='#'><%=author%></a></li><li class='price'><a href='#'><%=price%></a></li></ul></li>";
+
+			function makeBookElement(sTemplate, aBookList){
+				var total="";
+				aBookList.forEach(
+					function(item){
+						var result = sTemplate.replace("<%=src%>",item.src);
+						result = result.replace("<%=imgSrc%>",item.imgSrc);
+						result = result.replace("<%=title%>",item.title);
+						result = result.replace("<%=title%>",item.title);
+						result = result.replace("<%=author%>",item.author);
+						result = result.replace("<%=price%>",item.price);
+						total += result+"\n"; 
+					}
+				);
+
+				return total;
+			}
+				
+			function getBookList() {
+				var url = "http://10.73.43.227:8000/booklist.json";
+				var request = new XMLHttpRequest();
+				var shelf = document.getElementsByClassName('book')[0];
+				request.open("GET" , url , true);
+				request.send(null);
+
+
+				request.onreadystatechange = function() {
+					if(request.readyState === 4 && request.status === 200) {
+						result = request.responseText;
+						result = JSON.parse(result);
+						shelf.innerHTML=makeBookElement(sTemplate, result);
+					}
+				}
+			}
+
+			var seeMore = document.getElementsByClassName('more')[1];
+			seeMore.addEventListener('click', function(e){
+					getBookList();
+			}, false);			
+
+			window.addEventListener('load', function(){
+					var genre=document.querySelector(".genre");
+					var genrelayer=document.querySelector(".genrelayer");
+					
+					genrelayer.style.display="none";
+
+					document.body.addEventListener('click', function(e){
+							//alert(e.target.className);
+							if(genrelayer.style.display==="none"){
+								if(e.target.className==="genre")
+									genrelayer.style.display="block"
+							}
+							else{
+								if(e.target.className!=="genre")
+									genrelayer.style.display="none"
+							}
+					},false);
+// var target;
+
+					// genre.addEventListener('click', function(e){
+					// 		if(genrelayer.style.display==="none")
+					// 			genrelayer.style.display="block"
+
+					// 		else
+					// 			if(e.target.id==="")
+					// 			genrelayer.style.display="none"
+
+					// 		target=e.target.id;
+					// },false);
+
+
+
+			}, false);
+
+
+		</script>
 	</section>
 
 	<footer>

@@ -188,16 +188,46 @@ nav{
 
 #select{
 	float: left;
+	position: relative;
 	margin-left: 34px;
 	font-size: 0.9em;
 }
 
-#select ul, #select li{
+ul.genretitle{
 	display: inline-block;
 	height: 48px;
 	line-height: 48px;
 	text-align: center;
 	color: #8D8D8D;
+}
+
+.genrelayer{
+	width: 200px;
+	1padding: 48px;
+	position: absolute;
+	1left: -48px;
+	1top: -48px;
+	background-color: #FFFFFF;
+	z-index: 10;
+	
+}
+
+.genrelayer li{
+	height: 30px;
+	line-height: 30px;
+	padding-left: 14px;
+}
+
+.category ul, .category li{
+	display: inline-block;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	color: #8D8D8D;
+}
+
+.category{
+	display: inline-block;
 }
 
 #select .genre{
@@ -376,7 +406,7 @@ aside a{
 
 
 section{
-	overflow: hidden;
+	1overflow: hidden;
 }
 
 .shelf{
