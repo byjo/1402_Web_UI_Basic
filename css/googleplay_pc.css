@@ -5,7 +5,6 @@
 }
 
 
-
 header{
 	background-color: #F1F1F1;
 	min-width: 780px;
@@ -193,30 +192,6 @@ nav{
 	font-size: 0.9em;
 }
 
-ul.genretitle{
-	display: inline-block;
-	height: 48px;
-	line-height: 48px;
-	text-align: center;
-	color: #8D8D8D;
-}
-
-.genrelayer{
-	width: 200px;
-	1padding: 48px;
-	position: absolute;
-	1left: -48px;
-	1top: -48px;
-	background-color: #FFFFFF;
-	z-index: 10;
-	
-}
-
-.genrelayer li{
-	height: 30px;
-	line-height: 30px;
-	padding-left: 14px;
-}
 
 .category ul, .category li{
 	display: inline-block;
@@ -230,29 +205,65 @@ ul.genretitle{
 	display: inline-block;
 }
 
+
+
 #select .genre{
 	display: inline-block;
-	width: 80px;
-	text-align: center;
-	cursor: default;
-}
-
-#select .genre a{
-	display: inline-block;
-	width: 100%;
-	height: 100%;
-}
-
-#select .genre .icon{
-	background-position: -26px -1849px;
-	width: 15px;
-	height: 15px;
 }
 
 #select .genre a:hover{
 	background-color: #F2F2F2;
 	cursor: default;
 }
+
+.genre_title{
+	display: inline-block;
+	padding: 0 5px 0 15px;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	color: #8D8D8D;
+}
+
+.genre_icon{
+	display: inline-block;
+	background-image: url("./../img/pc_img.png");
+	background-size: 112px 1900px;
+	background-position: -55px -1873px;
+	width: 15px;
+	height: 15px;
+	padding-right: 10px;
+}
+
+.genrelayer{
+	width: 200px;
+	padding-top: 48px;
+	position: absolute;
+	left: 0;
+	top: -5px;
+	z-index: 10;
+	
+}
+
+.genrelayer ul{
+	padding: 6px 0;
+	background-color: #FFFFFF;
+	box-shadow: 0px 2px 40px 0px rgba(0,0,0,0.4);
+	border: 1px #d6d6d6;
+	border-radius: 3px;
+}
+
+.genrelayer li{
+	height: 30px;
+	line-height: 30px;
+	padding-left: 14px;
+}
+
+.genrelayer li:hover{
+	background-color: #F2F2F2;
+	cursor: pointer;
+}
+
 
 #select .bar{
 	display: inline-block;
@@ -409,6 +420,27 @@ section{
 	1overflow: hidden;
 }
 
+#loading_overlay{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 200px;
+	top: 60px;
+	background-color: #dddddd;
+	opacity: 0.65;
+	z-index: 100;
+	text-align: center;
+}
+
+.loading_img{
+	background-image: url("./../img/loading_dark_large.gif");
+	width: 150px;
+	height: 150px;
+	left: 50vw;
+	top: 50vh;
+	position: fixed;
+	display: inline-block;
+}
 .shelf{
 	min-width: 660px;
 	margin: 40px 0 0 200px;
@@ -445,8 +477,6 @@ section{
 }
 
 .book{
-	height: 330px;
-	max-height: 330px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	overflow: hidden;
@@ -454,7 +484,7 @@ section{
 
 .book > li{
 	float: left;
-	margin: 0 5px;
+	margin: 0px 10px 10px 0px;
 	width: 160px;
 	height: 330px;
 	box-shadow: 0 2px 4px rgba(0,0,0,0.1);

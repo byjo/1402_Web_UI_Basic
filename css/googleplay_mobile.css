@@ -1,6 +1,6 @@
 #wrap{
 	background-color: #E5E5E5;
-	min-width: 345px;
+	min-width: 387px;
 	font-size: 0.9em;
 }
 
@@ -56,13 +56,14 @@ header{
 
 /*nav*/
 #select_wrap {
+	margin: 0 32px;
 	text-align: center;
 }
 
 #select{
 	display: inline-block;
 	overflow: auto;
-	margin: 15px 0 0 0;
+	margin: 15px 0 0 -10px;
 	text-align: left;
 }
 
@@ -83,8 +84,30 @@ section{
 	clear: both;
 }
 
+.move{
+	background-image: url('./../img/slideshow.png');
+	width: 32px;
+	height: 44px;
+	z-index: 100;
+	position: fixed;
+}
+
+#left_move{
+	background-position: 0px 0px;
+	top: 50vh;
+	left: 0;
+}
+
+#right_move{
+	background-position: 32px 0px;
+	top: 50vh;
+	right: 0;
+}
+
 #section_wrap{
+	margin: 0 20px;
 	overflow: auto;
+	position: relative;
 }
 
 .shelf{
@@ -120,13 +143,11 @@ section{
 
 .book{
 	height: 330px;
-	max-height: 330px;
-	margin: 10px 0;
 	overflow: hidden;
 }
 
 .book > li{
-	float: left;
+	display: inline-block;
 	margin: 0 5px;
 	width: 160px;
 	height: 330px;
@@ -232,7 +253,7 @@ footer{
 
 @media (max-width: 510px) {
 	#select, .shelf {
-		width: 345px;
+		width: 346px;
 	}
 }
 

@@ -12,8 +12,8 @@
 <body>
 	<header>
 		<div id="logo">
-			<a href="http://play.google.com">
-				<img src="./img/play_logo_x2.png"></img>
+			<a href="./googleplay_pc.html">
+				<img src="./img/play_logo_x2.png">
 			</a>
 		</div>
 
@@ -42,22 +42,17 @@
 	<nav>
 		<div id="service">
 			<span class="icon"></span>
-			<span class="now_service"><a href="#">도서</a></span>		
+			<span class="now_service"><a href="./googleplay_pc.html">도서</a></span>		
 		</div>
 
 		<div id="select">
-			<!-- <div class="genre">
-				<a class="genre" href="#">
-					<ul class="genre genretitle">장르</ul>
-					<span class="genre icon"></span>
-				</a>
-			</div> -->
 			<div class="genre">
-				<a class="genre" href="#">
-					<ul class="genre">장르</ul>
-					<span class="genre"></span>
+				<a class="genre" ref="#">
+					<span class="genre_title">장르</span>
+					<span class="genre_icon"></span>
 				</a>
 			</div>
+
 			<div class="bar"></div>
 
 			<ul class="category">
@@ -66,24 +61,24 @@
 				<li><a href="#">신간</a></li>
 			</ul>
 
-			<!-- <div class="genrelayer" style="display:none;"> -->
 			<div class="genrelayer">
 				<ul>
-					<li>가족 / 관계</li>
-					<li>건강 / 웰빙</li>
-					<li>경영 / 경제</li>
-					<li>가족/관계</li>
-					<li>가족/관계</li>
-					<li>가족/관계</li>
-					<li>가족/관계</li>
-					<li>가족/관계</li>
-					<li>가족/관계</li>
-					<li>가족/관계</li>
-					<li>가족/관계</li>
-					<li>가족/관계</li>
-					<li>가족/관계</li>
-					<li>가족/관계</li>
-					<li>가족/관계</li>
+					<li class="genre01">가족 / 관계</li>
+					<li class="genre02">건강 / 웰빙</li>
+					<li class="genre03">경영 / 경제</li>
+					<li class="genre04">과학 / 수학</li>
+					<li class="genre05">만화</li>
+					<li class="genre06">소설 / 문학</li>
+					<li class="genre07">어린이</li>
+					<li class="genre08">여행</li>
+					<li class="genre09">역사</li>
+					<li class="genre10">예술과 디자인</li>
+					<li class="genre11">외국어 / 교재</li>
+					<li class="genre12">요리 / 음료</li>
+					<li class="genre13">인물 / 자서전</li>
+					<li class="genre14">정치 / 사회</li>
+					<li class="genre15">종교</li>
+					<li class="genre16">컴퓨터 / 기술</li>
 				</ul>
 			</div>
 
@@ -123,12 +118,16 @@
 
 
 	<section>
-		<div class="shelf">
+
+		<div id="loading_overlay">
+			<div class="loading_img"></div>
+		</div>
+		<div id="shelf1" class="shelf">
 			<div class="heading">
 				<a href="#"><h1>주간 베스트셀러</h1></a>
 				<br>
 				<a href="#"><span>한 주 동안 가장 많은 사랑을 받은 도서</span></a>
-				<a class="more" href="#"><div class="more">더보기</div></a>
+				<a class="more" href="#"><div id="shlef1_more" class="more">더보기</div></a>
 			</div>	
 			
 			<ul class="book">
@@ -234,12 +233,12 @@
 			</ul>
 		</div>
 		
-		<div class="shelf">
+		<div id="shelf2" class="shelf">
 			<div class="heading">
 				<a href="#"><h1>영화화된 원작 소설 특별전</h1></a>
 				<br>
 				<a href="#"><span>영화의 감동을 책으로 읽어보세요</span></a>
-				<a class="more" href="#"><div class="more">더보기</div></a>
+				<a class="more" href="#"><div id="shlef2_more" class="more">더보기</div></a>
 			</div>	
 			
 			<ul class="book">
@@ -344,86 +343,6 @@
 				</li>
 			</ul>
 		</div>
-
-		<script>
-
-			var sTemplate="<li><div class='cover'><a href='<%=src%>'><img src='<%=imgSrc%>' alt='<%=title%>'></a></div><ul class='content'><li class='title'><a href='#'><%=title%></a></li><li class='author'><a href='#'><%=author%></a></li><li class='price'><a href='#'><%=price%></a></li></ul></li>";
-
-			function makeBookElement(sTemplate, aBookList){
-				var total="";
-				aBookList.forEach(
-					function(item){
-						var result = sTemplate.replace("<%=src%>",item.src);
-						result = result.replace("<%=imgSrc%>",item.imgSrc);
-						result = result.replace("<%=title%>",item.title);
-						result = result.replace("<%=title%>",item.title);
-						result = result.replace("<%=author%>",item.author);
-						result = result.replace("<%=price%>",item.price);
-						total += result+"\n"; 
-					}
-				);
-
-				return total;
-			}
-				
-			function getBookList() {
-				var url = "http://10.73.43.227:8000/booklist.json";
-				var request = new XMLHttpRequest();
-				var shelf = document.getElementsByClassName('book')[0];
-				request.open("GET" , url , true);
-				request.send(null);
-
-
-				request.onreadystatechange = function() {
-					if(request.readyState === 4 && request.status === 200) {
-						result = request.responseText;
-						result = JSON.parse(result);
-						shelf.innerHTML=makeBookElement(sTemplate, result);
-					}
-				}
-			}
-
-			var seeMore = document.getElementsByClassName('more')[1];
-			seeMore.addEventListener('click', function(e){
-					getBookList();
-			}, false);			
-
-			window.addEventListener('load', function(){
-					var genre=document.querySelector(".genre");
-					var genrelayer=document.querySelector(".genrelayer");
-					
-					genrelayer.style.display="none";
-
-					document.body.addEventListener('click', function(e){
-							//alert(e.target.className);
-							if(genrelayer.style.display==="none"){
-								if(e.target.className==="genre")
-									genrelayer.style.display="block"
-							}
-							else{
-								if(e.target.className!=="genre")
-									genrelayer.style.display="none"
-							}
-					},false);
-// var target;
-
-					// genre.addEventListener('click', function(e){
-					// 		if(genrelayer.style.display==="none")
-					// 			genrelayer.style.display="block"
-
-					// 		else
-					// 			if(e.target.id==="")
-					// 			genrelayer.style.display="none"
-
-					// 		target=e.target.id;
-					// },false);
-
-
-
-			}, false);
-
-
-		</script>
 	</section>
 
 	<footer>
@@ -439,6 +358,9 @@
 		<a href="https://support.google.com/googleplay/?hl=kr&hlrm=en">도움말</a> | 이메일: <a href="https://play.google.com/store/mailto:gpk-usersupport@google.com">gpk-usersupport@google.com</a>
 		<br>구글 플레이에 등록된 앱과 게임은 개발자들이 제공하고 판매하는 것이며, 구글은 개발자가 아닌 이상 등록한 상품 정보 및 거래에 대한 어떠한 책임도 지지 않습니다.
 	</footer>
+	
+	<script src="./js/googleplay_pc.js"></script>
+	
 </body>
 
 </html>
