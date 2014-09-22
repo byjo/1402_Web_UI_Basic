@@ -7,22 +7,36 @@
 	 */
 	window.addEventListener('load', function(){
 			//setVariables();
+			var dShelf1 = document.getElementById('shelf1');
+			var dShelf2 = document.getElementById('shelf2');
+			var uSelectGenre = document.getElementById('select').querySelector('.genrelayer').querySelector('ul');
+			var dOverlay = document.getElementById('loading_overlay');
+			var uGenrelayer = document.querySelector('.genrelayer');
+			var uBooks1 = dShelf1.querySelector('.book');
+			var uBooks2 = dShelf2.querySelector('.book');
+			var dSeeMoreShelf1 = dShelf1.querySelector('div.more');
+			var dSeeMoreShelf2 = dShelf2.querySelector('div.more');
+
+			var oDATA = {
+				sShelfHeight : "330px",
+				hTitleShelf1 : "새로나온 도서",
+				hTitleShelf2 : "베스트셀러"
+			}
+
 			setElementStyle();
 			attachEvents();
 	}, false);
 
 	// function setVariables(){
-	// 	var oVAR = {
-	// 		dShelf1 : document.getElementById('shelf1'),
-	// 		dShelf2 : document.getElementById('shelf2'),
-	// 		uSelectGenre : document.getElementById('select').querySelector('.genrelayer').querySelector('ul'),
-	// 		dOverlay : document.getElementById('loading_overlay'),
-	// 		uGenrelayer : document.querySelector('.genrelayer'),
-	// 		uBooks1 : dShelf1.querySelector('.book'),
-	// 		uBooks2 : dShelf2.querySelector('.book'),
-	// 		dSeeMoreShelf1 : dShelf1.querySelector('div.more'),
-	// 		dSeeMoreShelf2 : dShelf2.querySelector('div.more')
-	// 	}
+	// 	var dShelf1 = document.getElementById('shelf1');
+	// 	var dShelf2 = document.getElementById('shelf2');
+	// 	var uSelectGenre = document.getElementById('select').querySelector('.genrelayer').querySelector('ul');
+	// 	var dOverlay = document.getElementById('loading_overlay');
+	// 	var uGenrelayer = document.querySelector('.genrelayer');
+	// 	var uBooks1 = dShelf1.querySelector('.book');
+	// 	var uBooks2 = dShelf2.querySelector('.book');
+	// 	var dSeeMoreShelf1 = dShelf1.querySelector('div.more');
+	// 	var dSeeMoreShelf2 = dShelf2.querySelector('div.more');
 
 	// 	var oDATA = {
 	// 		sShelfHeight : "330px",
@@ -30,21 +44,7 @@
 	// 		hTitleShelf2 : "베스트셀러"
 	// 	}
 	// }
-	var dShelf1 = document.getElementById('shelf1');
-	var dShelf2 = document.getElementById('shelf2');
-	var uSelectGenre = document.getElementById('select').querySelector('.genrelayer').querySelector('ul');
-	var dOverlay = document.getElementById('loading_overlay');
-	var uGenrelayer = document.querySelector('.genrelayer');
-	var uBooks1 = dShelf1.querySelector('.book');
-	var uBooks2 = dShelf2.querySelector('.book');
-	var dSeeMoreShelf1 = dShelf1.querySelector('div.more');
-	var dSeeMoreShelf2 = dShelf2.querySelector('div.more');
 
-	var oDATA = {
-		sShelfHeight : "330px",
-		hTitleShelf1 : "새로나온 도서",
-		hTitleShelf2 : "베스트셀러"
-	}
 
 	/* 
 	 * setElementStyle
